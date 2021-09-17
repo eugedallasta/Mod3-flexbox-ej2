@@ -1,0 +1,201 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  color: grey;
+}
+/*Web Container (Padre)*/
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+.general-margins{
+  padding: 10px;
+}
+/*Header Container (Hijo 1)*/
+.header {
+  width: 100%;
+  height: 30vh;
+  background:url(./images/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg);
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.menu {
+  background: rgba(0, 0, 0, .1);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  height: 30%;
+}
+.logo {
+  flex: 1 1 auto; 
+}
+.logo-img{
+  height: 80px;
+}
+.header-nav {
+  flex: 5 1 auto;
+}
+.header-nav a{
+  font-size: 14px;
+  padding: 0 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.header-nav a:hover{
+  font-size: 16px;
+  color: darkgray;
+  transition: ease-in-out;
+}
+.social{
+  flex: 1 1 auto;
+}
+.social a{
+  font-size: 22px;
+  padding: 0 5px;
+}
+.social a:hover{
+  font-size: 24px;
+  transition: ease-in-out;
+}
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+.h1 {
+  color: rgb(192, 46, 168,.6);
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+/*Section Container (Hijo 2)*/
+.section {
+  background: #f7f7f7;
+  width: 100%;
+  display: flex;
+}
+.articles {
+  background: #f7f7f7
+  flex: 2 1 auto; /*propiedad x ser hijo de section*/
+  display: flex; /*propiedad x ser padre de each-article*/
+  flex-flow: row wrap;
+}
+.each-article {
+  color: #444444;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 10px 10px 0 0;
+  flex: 1 1 45%;
+  background: #ececec;
+}
+.each-article img{
+  width: 100%;
+ 
+}
+.each-article h3{
+  color: #3f3b3b;
+  padding: 10px 5px;
+  
+}
+.each-article h2{
+  color: #574646;
+  font-size:25px;
+  text-transform: uppercase;
+  padding: 0 5px 5px 5px;
+  
+}
+.each-article p{
+  color:black;
+  margin: auto;
+  padding:0 5px 5px 5px;
+}
+
+/*Footer Container (Hijo 3)*/
+.footer{
+  background: #3f3b3b;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p{
+  color: #f7f7f7;
+  text-align: center;
+}
+
+/*Media Query*/
+
+/* de cero a 500 px va a tener los siguientes estilos: */
+@media (max-width:500px){
+.logo-img{
+  height: 50px;
+}
+.articles{
+  flex-direction: column;
+}
+.header-nav a{
+  font-size: 10px;
+}
+.header a:hover{
+  font-size: 12px;
+}
+.social a{
+  font-size: 18px;
+}
+.social a:hover{
+  font-size: 20px;
+}
+.h1{
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1;
+}
+.each-article{
+  font-size: 8px;
+}
+
+}
+/* de 500 a 768 px va a tener los siguientes estilos: */
+@media all and (max-width:768px){
+.header{
+  height: 40vh;
+}
+.menu{
+   flex-direction: column;
+   height: auto;
+}
+.section{
+  flex-direction: column;
+}
+.header-nav a{
+  font-size: 9px;
+}
+.header a:hover{
+  font-size: 14px;
+}
+.social a{
+  font-size: 20px;
+}
+.social a:hover{
+  font-size: 22px;
+}
+.h1{
+  font-size: 22px;
+}
+.each-article{
+  font-size: 10px;
+}
+}
